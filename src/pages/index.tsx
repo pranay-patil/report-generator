@@ -1,16 +1,22 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import "../styles/globals.css";
+import Card from "./components/Card";
+import Navbar from "./components/Navbar";
+import InputF from "./components/InputF";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-});
+import Cart from "./components/Cart";
 
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
-});
 
 export default function Home() {
-	return <div>Dashboard Report</div>;
+  return (
+    <div>
+      <Navbar></Navbar>
+      <InputF></InputF>
+      <h1>Dashboard Report</h1>
+      <Cart></Cart>
+     
+
+      {/* <Card></Card> */}
+      {/* <User></User> */}
+    </div>
+  );
 }
