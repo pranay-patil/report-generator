@@ -22,20 +22,20 @@ function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+  const handleOpenNavMenu =React.useCallback( (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+  },[]);
+  const handleOpenUserMenu =React.useCallback( (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
-  };
+  },[]);
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu =React.useCallback( () => {
     setAnchorElNav(null);
-  };
+  },[]);
 
-  const handleCloseUserMenu = () => {
+  const handleCloseUserMenu = React.useCallback(() => {
     setAnchorElUser(null);
-  };
+  },[]);
 
   return (
     <AppBar position="static"  sx={{ backgroundColor: '#26a69a' }}>
